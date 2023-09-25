@@ -36,7 +36,7 @@ jobs:
         with:
           name: pip-packages
           path: ~/.local/lib/python3.10/site-packages/
-  build_push_image:
-    needs: build_artifact
-    runs-on: ubuntu-latest
+  #build_push_image:
+  # needs: build_artifact
+  #  runs-on: ubuntu-latest
           
