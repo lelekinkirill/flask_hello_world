@@ -27,6 +27,16 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r ./requirements.txt
-
-      - name: Test App Code 
-        run: python ./server.py
+      
+      - uses: actions/upload-artifact@v2
+        with:
+          name: pip-packages
+          path: ~/.local/lib/python3.10/site-packages/ 
+      - uses: actions/download-artifact@v2
+        with:
+          name: pip-packages
+          path: ~/.local/lib/python3.10/site-packages/
+    build_push_image:
+      needs: build_artifact
+      runs-on: ubuntu-latest
+          
