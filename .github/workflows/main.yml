@@ -35,7 +35,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: pip-packages
-          path: ./packages
+          path: ./src/packages
   build_image:
     needs: test
     runs-on: ubuntu-latest
