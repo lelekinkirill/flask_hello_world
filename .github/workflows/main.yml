@@ -27,6 +27,8 @@ jobs:
         run: mkdir packages
       - name: Install requiremants
         run: pip install -r ./requirements.txt --target ./packages
+      - name: Show all 
+        run: ls -lah . && ls -lah ./packages
   
           
       
